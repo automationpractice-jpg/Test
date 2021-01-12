@@ -47,7 +47,7 @@ public class placeAPIStepsD extends Utils{
 				response = request.when().get(objResource.getResource());
 				   //.then().spec(placeAPIRespSpecification()).extract().response();	
 			}
-		    	System.out.println("Response is "+response.asString());
+		    	System.out.println("Response is : "+response.asString());
 		    }
 
 	    @Then("the API call got success with status code {int}")
@@ -71,7 +71,7 @@ public class placeAPIStepsD extends Utils{
 		    
 			user_calls_with_http_request(strResource,"GET");
 			
-			System.out.println("Response is "+response.asString());
+			System.out.println("Response is : "+response.asString());
 			name = getJSONPath(response, "name");
 			assertEquals(name, strExpName);
 		}
